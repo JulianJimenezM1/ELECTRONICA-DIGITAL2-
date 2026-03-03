@@ -1,9 +1,9 @@
-# ⚡ Electrónica Digital II
+# Electrónica Digital II
 
 Repositorio correspondiente a la asignatura **Electrónica Digital II**.
 
-## 🚀 Proyecto Actual
-### 🧠 Sistema Avanzado de Medición de Reflejos
+## Proyecto Actual
+### Sistema Avanzado de Medición de Reflejos
 
 Implementación en **ESP32** de un sistema interactivo que evalúa la rapidez de respuesta de los jugadores ante señales luminosas y sonoras.
 
