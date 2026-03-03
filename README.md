@@ -5,15 +5,14 @@ Repositorio correspondiente a la asignatura **Electrónica Digital II**.
 ## 🚀 Proyecto Actual
 ### 🧠 Sistema Avanzado de Medición de Reflejos
 
-Sistema implementado en **ESP32** que mide el tiempo de reacción de uno o dos jugadores mediante estímulos visuales (LEDs) y sonoros (buzzer).
+Implementación en **ESP32** de un sistema interactivo que evalúa la rapidez de respuesta de los jugadores ante señales luminosas y sonoras.
 
 ## ⚙️ Características principales
 
-- Selección de 1 o 2 jugadores  
-- 3 LEDs y 1 buzzer activo  
-- Medición de tiempo por software  
-- Antirrebote por software  
-- Sistema de puntuación  
-- Penalización por error  
-- Estímulos aleatorios  
-- Modo especial **"Simón Dice"** mediante interrupción  
+- Modo de juego para uno o dos jugadores  
+- Generación de estímulos visuales y auditivos  
+- Cálculo preciso del tiempo de respuesta  
+- Lectura confiable de botones (antirrebote)  
+- Sistema de puntaje con penalizaciones  
+- Activación de modos especiales por interrupciones  
+- Modalidad adicional tipo **"Simón Dice"**  
