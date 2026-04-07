@@ -1,100 +1,92 @@
-# 🤖 Trabajo 2 - Grúa Robótica con ESP32
+🤖 Trabajo 2 - Grúa Robótica con ESP32
+📌 Descripción
 
-## 📌 Descripción
+Este proyecto consiste en el diseño e implementación de una grúa robótica de sobremesa con 2 grados de libertad (GDL), controlada mediante un microcontrolador ESP32.
 
-Este proyecto consiste en el diseño e implementación de una **grúa robótica de sobremesa** con **2 grados de libertad (GDL)**, controlada mediante un microcontrolador **ESP32**.
+El sistema permite el control manual a través de potenciómetros, así como la ejecución de modos automáticos mediante interrupciones, garantizando precisión, control y facilidad de uso.
 
-El sistema permite el **control manual mediante potenciómetros** y cuenta con **modos automáticos activados por interrupciones**.
+⚙️ Componentes del Sistema
+🔹 Entradas
+2 Potenciómetros lineales:
+Control de rotación de la base
+Control de elevación del brazo
+2 Pulsadores con interrupción:
+Retorno automático a posición inicial
+Activación de secuencia automática
+🔹 Procesamiento
+Microcontrolador ESP32
+Conversión ADC:
+Potenciómetro 1: resolución de 12 bits
+Potenciómetro 2: resolución de 10 bits
+Procesamiento de señales:
+Escalamiento de valores analógicos a PWM
+Generación de señales PWM para servomotores
+Control del sistema:
+Manejo de interrupciones
+Implementación de lógica de estados (modo manual / automático)
+🔹 Salidas
+2 Servomotores:
+Servo 1: rotación de la base
+Servo 2: movimiento del brazo
+Indicadores:
+LED verde → modo manual
+LED rojo → modo automático
+Actuador sonoro:
+Buzzer → alerta durante modos automáticos
+🔄 Funcionamiento del Sistema
+🟢 Modo Manual
+Los potenciómetros generan señales analógicas proporcionales a su posición.
+El ESP32 lee estos valores mediante el ADC.
+Los datos se convierten a señales PWM que controlan los servos.
+Se permite el control en tiempo real del sistema.
 
----
+🔹 Indicador: LED verde encendido
 
-## ⚙️ Componentes del Sistema
-
-### 🔹 Entradas
-
-* 2 Potenciómetros:
-
-  * Control de rotación de la base
-  * Control de elevación del brazo
-* 2 Pulsadores:
-
-  * Retorno a posición inicial
-  * Activación de secuencia automática
-
----
-
-### 🔹 Procesamiento
-
-* Microcontrolador **ESP32**
-* Conversión ADC:
-
-  * Potenciómetro 1: 12 bits
-  * Potenciómetro 2: 10 bits
-* Generación de señal PWM para servomotores
-* Manejo de interrupciones
-* Uso de variables de estado (modo manual / automático)
-
----
-
-### 🔹 Salidas
-
-* 2 Servomotores:
-
-  * Servo 1: rotación de la base
-  * Servo 2: movimiento del brazo
-* LED verde: indica modo manual
-* LED rojo: indica modo automático
-* Buzzer: alerta durante el modo automático
-
----
-
-## 🔄 Funcionamiento del Sistema
-
-### 🟢 Modo Manual
-
-Los potenciómetros controlan directamente el movimiento de los servos.
-El sistema convierte la señal analógica a valores PWM, permitiendo control en tiempo real.
-El **LED verde permanece encendido**.
-
----
-
-### 🔴 Modo Automático - Retorno
-
-Se activa mediante un pulsador con interrupción.
-La grúa regresa automáticamente a su posición inicial.
+🔴 Modo Automático – Retorno
+Activado mediante un pulsador (interrupción).
+El sistema:
+Desactiva el control manual
+Lleva los servos a su posición inicial de forma gradual
 
 Durante este proceso:
 
-* Se enciende el LED rojo
-* Se activa el buzzer
+LED rojo encendido
+Buzzer activo
 
-Al finalizar, el sistema vuelve al modo manual.
+Al finalizar:
 
----
+Regresa automáticamente al modo manual
+🔁 Modo Automático – Secuencia
+Se activa mediante un segundo pulsador.
+Ejecuta una rutina preprogramada de movimientos de la grúa.
 
-### 🔁 Modo Automático - Secuencia
+Durante la ejecución:
 
-Se ejecuta una rutina predefinida de movimientos.
-El sistema opera de forma automática y, al finalizar, retorna al modo manual.
+LED rojo encendido
+Buzzer activo
 
----
+Al finalizar:
 
-## 💻 Código
+El sistema vuelve al modo manual
+💻 Código
 
-El código principal del proyecto se encuentra en:
+El programa principal se encuentra en:
 
-```
-main.py
-```
+📄 main.py
 
 Incluye:
 
-* Lectura ADC
-* Control PWM
-* Manejo de interrupciones
-* Lógica de estados
+Lectura de señales ADC
+Generación de PWM
+Manejo de interrupciones
+Control de estados del sistema
+🚀 Conclusión
 
+Este proyecto permite integrar conceptos clave de sistemas embebidos como:
 
+Conversión analógica-digital
+Control de actuadores
+Manejo de interrupciones
+Diseño de sistemas en tiempo real
 
-🚀 Proyecto desarrollado como parte de prácticas de sistemas embebidos.
-
+Logrando un sistema funcional, intuitivo y con aplicaciones en automatización básica.
