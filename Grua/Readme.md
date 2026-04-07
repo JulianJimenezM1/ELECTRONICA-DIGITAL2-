@@ -1,92 +1,99 @@
-🤖 Trabajo 2 - Grúa Robótica con ESP32
-📌 Descripción
+# 🤖 Trabajo 2 - Grúa Robótica con ESP32
 
-Este proyecto consiste en el diseño e implementación de una grúa robótica de sobremesa con 2 grados de libertad (GDL), controlada mediante un microcontrolador ESP32.
+## 📌 Descripción
+Este proyecto consiste en el diseño e implementación de una **grúa robótica de sobremesa con 2 grados de libertad (GDL)**, controlada mediante un microcontrolador **ESP32**.
 
-El sistema permite el control manual a través de potenciómetros, así como la ejecución de modos automáticos mediante interrupciones, garantizando precisión, control y facilidad de uso.
+El sistema permite el control manual mediante potenciómetros y la ejecución de **modos automáticos mediante interrupciones**, proporcionando un control preciso y en tiempo real.
 
-⚙️ Componentes del Sistema
-🔹 Entradas
-2 Potenciómetros lineales:
-Control de rotación de la base
-Control de elevación del brazo
-2 Pulsadores con interrupción:
-Retorno automático a posición inicial
-Activación de secuencia automática
-🔹 Procesamiento
-Microcontrolador ESP32
-Conversión ADC:
-Potenciómetro 1: resolución de 12 bits
-Potenciómetro 2: resolución de 10 bits
-Procesamiento de señales:
-Escalamiento de valores analógicos a PWM
-Generación de señales PWM para servomotores
-Control del sistema:
-Manejo de interrupciones
-Implementación de lógica de estados (modo manual / automático)
-🔹 Salidas
-2 Servomotores:
-Servo 1: rotación de la base
-Servo 2: movimiento del brazo
-Indicadores:
-LED verde → modo manual
-LED rojo → modo automático
-Actuador sonoro:
-Buzzer → alerta durante modos automáticos
-🔄 Funcionamiento del Sistema
-🟢 Modo Manual
-Los potenciómetros generan señales analógicas proporcionales a su posición.
-El ESP32 lee estos valores mediante el ADC.
-Los datos se convierten a señales PWM que controlan los servos.
-Se permite el control en tiempo real del sistema.
+---
 
-🔹 Indicador: LED verde encendido
+## ⚙️ Componentes del Sistema
 
-🔴 Modo Automático – Retorno
-Activado mediante un pulsador (interrupción).
-El sistema:
-Desactiva el control manual
-Lleva los servos a su posición inicial de forma gradual
+### 🔹 Entradas
+- 🎛️ **2 Potenciómetros lineales:**
+  - Rotación de la base  
+  - Elevación del brazo  
+
+- 🔘 **2 Pulsadores (con interrupciones):**
+  - Retorno a posición inicial  
+  - Activación de secuencia automática  
+
+---
+
+### 🔹 Procesamiento
+- 🧠 **Microcontrolador:** ESP32  
+
+- 📊 **Conversión ADC:**
+  - Potenciómetro 1 → 12 bits  
+  - Potenciómetro 2 → 10 bits  
+
+- ⚡ **Procesamiento de señales:**
+  - Escalamiento de valores analógicos  
+  - Generación de PWM para servos  
+
+- 🔄 **Control del sistema:**
+  - Manejo de interrupciones  
+  - Lógica de estados (manual / automático)  
+
+---
+
+### 🔹 Salidas
+- ⚙️ **2 Servomotores:**
+  - Servo 1 → Rotación de la base  
+  - Servo 2 → Movimiento del brazo  
+
+- 💡 **Indicadores:**
+  - LED verde → Modo manual  
+  - LED rojo → Modo automático  
+
+- 🔊 **Buzzer:**
+  - Alerta durante modo automático  
+
+---
+
+## 🔄 Funcionamiento del Sistema
+
+### 🟢 Modo Manual
+- Los potenciómetros generan señales analógicas proporcionales.  
+- El ESP32 lee estas señales mediante el ADC.  
+- Los valores se convierten a PWM para controlar los servos.  
+- Permite control en tiempo real de la grúa.  
+
+💡 **Indicador:** LED verde encendido  
+
+---
+
+### 🔴 Modo Automático – Retorno
+- Se activa mediante un pulsador (interrupción).  
+- El sistema:
+  - Desactiva el control manual  
+  - Lleva los servos a su posición inicial  
 
 Durante este proceso:
-
-LED rojo encendido
-Buzzer activo
+- 🔴 LED rojo encendido  
+- 🔊 Buzzer activo  
 
 Al finalizar:
+- Retorna al modo manual  
 
-Regresa automáticamente al modo manual
-🔁 Modo Automático – Secuencia
-Se activa mediante un segundo pulsador.
-Ejecuta una rutina preprogramada de movimientos de la grúa.
+---
+
+### 🔁 Modo Automático – Secuencia
+- Activado mediante un segundo pulsador.  
+- Ejecuta una rutina predefinida de movimientos.  
 
 Durante la ejecución:
-
-LED rojo encendido
-Buzzer activo
+- 🔴 LED rojo encendido  
+- 🔊 Buzzer activo  
 
 Al finalizar:
+- Vuelve automáticamente al modo manual  
 
-El sistema vuelve al modo manual
-💻 Código
+---
 
-El programa principal se encuentra en:
+## 💻 Código
 
-📄 main.py
+El archivo principal del proyecto es:
 
-Incluye:
-
-Lectura de señales ADC
-Generación de PWM
-Manejo de interrupciones
-Control de estados del sistema
-🚀 Conclusión
-
-Este proyecto permite integrar conceptos clave de sistemas embebidos como:
-
-Conversión analógica-digital
-Control de actuadores
-Manejo de interrupciones
-Diseño de sistemas en tiempo real
-
-Logrando un sistema funcional, intuitivo y con aplicaciones en automatización básica.
+```bash
+main.py
