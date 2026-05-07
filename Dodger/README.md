@@ -153,7 +153,7 @@ El PWM se utiliza para generar sonidos en el buzzer.
 
 La temporización del juego fue implementada utilizando:
 
-```python
+
 ticks_ms()
 ticks_diff()
 ticks_add()
