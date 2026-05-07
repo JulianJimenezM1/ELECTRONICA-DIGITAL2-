@@ -8,7 +8,7 @@ El juego trata de controlar un personaje para esquivar obstáculos que aparecen 
 
 La idea del proyecto fue integrar varias cosas vistas en Electrónica Digital II como GPIO, I2C, PWM, debounce y máquinas de estado.
 
----
+
 
 # Componentes del sistema
 
@@ -22,7 +22,7 @@ Se utilizaron 3 botones:
 - Movimiento abajo
 - Inicio / pausa del juego
 
----
+
 
 ## Procesamiento
 
