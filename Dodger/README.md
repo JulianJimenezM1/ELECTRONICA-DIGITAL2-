@@ -115,9 +115,7 @@ Incluye:
 
 El código principal del proyecto está en:
 
-```python
 main.py
-```
 
 El programa incluye:
 
@@ -153,11 +151,9 @@ El PWM se utiliza para generar sonidos en el buzzer.
 
 La temporización del juego fue implementada utilizando:
 
-
-ticks_ms()
-ticks_diff()
-ticks_add()
-```
+- ticks_ms()
+- ticks_diff()
+- ticks_add()
 
 Esto permite que el juego funcione sin bloquear el programa mientras se ejecutan sonidos, movimiento y obstáculos al mismo tiempo.
 
@@ -174,7 +170,7 @@ La librería maneja:
 - Framebuffer
 - Dibujo de texto y píxeles
 
-También se utiliza `framebuf` para dibujar sprites y gráficos del juego.
+También se utiliza framebuf para dibujar sprites y gráficos del juego.
 
 ---
 
