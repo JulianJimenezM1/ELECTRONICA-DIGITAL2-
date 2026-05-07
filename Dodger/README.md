@@ -45,7 +45,7 @@ Comunicación utilizada para controlar la pantalla OLED.
 
 Pines utilizados:
 
-SDA → GPIO 21
+SDA → GPIO 21\\
 SCL → GPIO 22
 PWM
 
