@@ -1,4 +1,6 @@
 Monitoreo de temperatura, humedad y movimiento con ESP32
+
+
 Descripción del proyecto
 
 Este proyecto trata de un sistema de monitoreo hecho con una ESP32. La idea principal es poder medir la temperatura y la humedad del ambiente usando un sensor DHT11, y tambien detectar movimiento con el sensor MPU6050.
